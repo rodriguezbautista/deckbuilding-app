@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
 :root{
   --img_small: 8rem;
-  --deck_container: 54rem; /*  6*(1rem + img_ small)  */
-}
+  --deck_container: 54rem; /*  6*(1rem + img_ small)  
+
 
 ::-webkit-scrollbar{
   width: 4px;
@@ -184,3 +185,4 @@ img{
   text-align: center;
   font-weight: 700;
 }
+*/
