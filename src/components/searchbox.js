@@ -6,7 +6,7 @@ export function SearchBox () {
   const [searchText, setSearchtext] = useState('')
 
   return (
-  <div className='flex flex-col items-center bg-gray-700 w-20 h-min'>
+  <div className='flex flex-col bg-gray-700 h-min w-80'>
     <SearchBar
       searchText={searchText}
       onSearchtextChange={setSearchtext} />
@@ -18,9 +18,9 @@ export function SearchBox () {
  
 function SearchBar ({ searchText, onSearchtextChange }) {
   return (
-    <form className='flex justify-center w-full'>
+    <form className='flex justify-center'>
       <input
-        className='bg-inherit py-0.25 px-1 my-0.5 border-none'
+        className='bg-inherit py-1 px-4 my-2 text-white border-b border-b-gray-300 text-center focus:outline-none focus:border-b-2 focus:mb-[calc(0.5rem-1px)] focus:border-b-white'
         type="text"
         placeholder="Search cards..."
         value={searchText}
@@ -44,9 +44,10 @@ function CardList ({ searchText }) {
 
   return (
     <>
-      <ul className='searchbox-cardlist'>
+      <ul className='overflow-auto max-h-[32rem] empty:max-h-0'>
         {cardlist?.data.map(card =>
-          <li className='searchbox-cardlist-item' id={card.id} key={card.id} onClick={() => handleCardSubmit(card)}>
+          <li className='flex justify-between cursor-pointer text-white p-4 w-full [&:not(:first-child)]:border-t [&:not(:first-child)]:border-t-white hover:bg-gray-600'
+           id={card.id} key={card.id} onClick={() => handleCardSubmit(card)}>
             <span>{card.name}</span>
             <span>{card.id}</span>
           </li>)}

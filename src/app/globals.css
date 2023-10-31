@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-:root{
+/* :root{
   --img_small: 8rem;
-  --deck_container: 54rem; /*  6*(1rem + img_ small)  
+  --deck_container: 54rem; /*  6*(1rem + img_ small) */  
 
 
 ::-webkit-scrollbar{
@@ -16,7 +15,7 @@
   background-color: white;
   border-radius: 8rem;
 }
-
+/*
 *{
   margin: 0;
   padding: 0;

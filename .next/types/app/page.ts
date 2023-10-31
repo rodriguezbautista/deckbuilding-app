@@ -1,4 +1,4 @@
-// File: C:\Users\Lenovo\Desktop\bauti\deckbuilding-app\src\app\page.js
+// File: C:\Users\Bauti\Documents\portfolio\deckbuilding-app-v1\src\app\page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
