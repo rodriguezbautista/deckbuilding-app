@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import pokemon from 'pokemontcgsdk'
 
-export function useGetCardlist (searchText, setCardlist) {
+export function useGetCardlist (searchText, setCardlist, equivalences) {
   useEffect(() => {
     const getData = setTimeout(() => {
       if (searchText.length) {
@@ -12,7 +12,13 @@ export function useGetCardlist (searchText, setCardlist) {
           orderBy: '-set.id,id',
           pageSize: 64
         })
-          .then(response => setCardlist(response))
+          .then(res => res.data)
+          .then(data => setCardlist(data.map(card => {
+            const set = { ...card.set, id: equivalences[card.set.id] }
+            let id = card.id.slice(card.id.indexOf('-'))
+            id = equivalences[card.set.id] + ' ' + id.slice(/\d/.exec(id).index)
+            return { ...card, id, set }
+          })))
           .catch(setCardlist())
       } else setCardlist()
     }, 300)

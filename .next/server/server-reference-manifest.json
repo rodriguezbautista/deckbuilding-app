@@ -1,4 +1,13 @@
 {
-  "node": {},
+  "node": {
+    "53cbd69c878b1123df9beedcf1628689d3df57cc": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CBauti%5C%5CDocuments%5C%5Cdeckbuilding-app-v1%5C%5Csrc%5C%5Cactions%5C%5CgetEquivalents.js%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    }
+  },
   "edge": {}
 }

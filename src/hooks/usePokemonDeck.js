@@ -37,7 +37,6 @@ function deckReducer (deck, action) {
   const addCard = () => {
     if (deck.length.Pokémon + deck.length.Energy + deck.length.Trainer === DECK_MAX_LENGTH) { return deck }
     deck.length[supertype]++
-    console.log(deck.length)
     if (!deck[supertype].some(c => c.id === card.id)) {
       function maxCopies () {
         switch (card.supertype) {
