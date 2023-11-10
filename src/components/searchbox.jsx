@@ -10,7 +10,7 @@ export function SearchBox () {
   return (
   <div
   tabIndex={0}
-  className='relative flex flex-col bg-gray-700 h-min w-80'
+  className='relative flex flex-col bg-gray-800 h-min w-80'
   onFocus={() => setIsFocused(true)}
   onBlur={() => setIsFocused(false)}>
     <SearchBar
@@ -60,7 +60,7 @@ function CardList ({ searchText, isFocused }) {
     <>
       <ul className={'z-10 absolute top-[49px] bg-inherit overflow-auto max-h-[32rem] w-full ' + (isFocused ? 'visible' : 'invisible')}>
         {cardlist?.map(card =>
-          <li className='flex justify-between cursor-pointer text-white p-4 w-full [&:not(:first-child)]:border-t [&:not(:first-child)]:border-t-white hover:bg-gray-600'
+          <li className='flex justify-between cursor-pointer text-white p-4 [&:not(:first-child)]:border-t [&:not(:first-child)]:border-t-white hover:bg-gray-700'
            id={card.id} key={card.id} onClick={() => handleCardSubmit(card)}>
             <span>{card.name}</span>
             <span>{card.id}</span>

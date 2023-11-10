@@ -7,7 +7,7 @@ import { Deck } from '../components/deck'
 export default function Home () {
   return (
     <DeckProvider>
-      <div className="flex flex-wrap gap-8 justify-evenly p-2 m-auto">
+      <div className="flex flex-wrap gap-8 justify-evenly p-8 m-auto">
         <SearchBox />
         <Deck />
       </div>
