@@ -1,0 +1,231 @@
+.app{
+  max-width: 1024px;
+}
+
+
+
+
+/* Searchbox */
+
+
+
+
+
+.searchbox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  width: 100%;
+}
+
+.searchbar{
+  margin-inline: auto;
+}
+
+.searchbar-input{
+  border: none;
+  background-color: inherit;
+  padding: 0.25rem 1rem;
+  margin: 1rem 0.5rem;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  line-height: 1.5;
+
+  &:focus{
+    outline: none;
+    border-bottom-width: 2px;
+    margin-bottom: calc(1rem - 1px);
+  }
+}
+
+.searchbox-cardlist{
+  display: grid;
+  grid-auto-flow: column;
+  
+  overflow-x: auto; 
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 0.5rem;
+
+
+  &::-webkit-scrollbar{
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 8rem;
+  }
+
+  &:not(:empty){
+    gap: 1rem;
+    padding: 0 4rem;
+    scroll-padding-inline: 4rem;
+  }
+}
+
+.searchbox-cardlist-item{
+  cursor: pointer;
+}
+
+.scroll-button{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  width: 2.5rem;  
+  height: 2.5rem;
+  border-radius: 100%;
+  
+  position: absolute;
+  top: 50%;
+}
+
+.scroll-button-left{
+  left: 0;
+}
+
+.scroll-button-right{
+  right: 0;
+}
+
+
+
+
+
+/* Deck */
+
+
+
+
+
+.deck{
+  width: 100%;
+
+  & > h2{
+    width: min-content;
+    margin: 1rem auto;
+  }
+}
+
+.deck-info{
+  margin-block: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  text-align: center;
+}
+
+.deck-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--img-size), max-content));
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:not(:empty){
+    padding: 0.5rem;
+  }
+}
+
+
+
+
+
+/* Card */
+
+
+
+
+
+.card{
+  --padding: 2rem;
+  display: flex;
+  position: relative;
+  color: white;
+}
+
+.card-info{
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0.75rem;
+  width: 100%;
+
+  & > *{
+    font-size: var(--card-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card-button{
+  background-color: rgb(255, 136, 39);
+  padding: 0.25rem;
+  height: var(--padding);
+  width: var(--padding);
+  border-radius: 100%;
+}
+
+.card-copies{
+  background-color: black;
+  padding: 0.25rem;
+  height: var(--padding);
+  width: var(--padding);
+  border-radius: 100%;
+  text-align: center;
+}
+
+
+
+
+
+/* Media Queries */
+
+
+
+
+
+@media (min-width: 1025px){
+  .searchbox-cardlist-item:nth-of-type(5n+1){
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+  .searchbox-cardlist-item:nth-of-type(4n+1){
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (min-width: 513px) and (max-width: 768px){
+  
+  .searchbox-cardlist::-webkit-scrollbar{
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .searchbox-cardlist-item:nth-of-type(3n+1){
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (max-width: 512px){
+  :root{
+    --img-size: 8rem;
+  }
+
+  .searchbox-cardlist-item:nth-of-type(2n+1){
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  .card{
+    --padding: 1.5rem;
+    --card-font-size: 14px;
+  }
+}

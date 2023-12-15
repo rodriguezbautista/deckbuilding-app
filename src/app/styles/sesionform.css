@@ -1,0 +1,45 @@
+.form-container{
+  width: 22rem;
+  padding: 1rem;
+}
+
+.session-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.submit-btn{
+  width: 100%;
+  background-color: rgb(27, 117, 208);
+  color: white;
+  border: none;
+
+  &:hover, &:focus{
+    outline: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.session-form input, .submit-btn{
+  line-height: 1.5;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.session-form input{
+  border: none;
+  outline: 1px solid grey;
+
+  &:focus{
+    outline: 1px solid rgb(27, 117, 208);
+  }
+}
