@@ -1,7 +1,14 @@
-# Proyecto en React para armar mazos de cartas pokemon
+#Pokemon DeckBuilder
 
+Esta es una alicacion para armado y almacenamiento de mazos pokemon.
 
+## Funcionalidades
 
+Busqueda de cartas por nombre, armado de mazos, (TODO) cuentas y almacenamiento
+
+## Live Preview: https://pokemon-deckbuilder.vercel.app/
+
+![image](https://github.com/rodriguezbautista/pokemon-deckbuilder/assets/59210468/432362ff-b92b-441d-a2b3-d44b7d911b83)
 
 
 
