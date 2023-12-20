@@ -25,7 +25,7 @@ export function CardModal ({ card }) {
         <img className='card-img-large' src={card.images.large} alt={card.name + ' image'} />
         <button ref={closeModalBtn} className='card-modal-closebtn'>x</button>
         <div className='card-modal-details'>
-          <h1>{card.name}{(card.supertype === 'Pokémon') && <img className='energy-icon' src={`/${card.types[0]}-energy.png`} />}</h1>
+          <h1>{card.name}{(card.supertype === 'Pokémon') && <img className='energy-icon' src={`/${card.types[0]}-energy.PNG`} />}</h1>
           <h2>{card.set.name}</h2>
           <h3>Card type: <span>{card.supertype}</span></h3>
           <h3>Subtype: <span>{card.subtypes.join(', ')}</span></h3>
@@ -46,7 +46,7 @@ export function CardModal ({ card }) {
                     <li key={attack.name}>
                       <h3>{attack.name}
                         <div>
-                          {attack.cost.map((e, index) => <img className='energy-icon' key={index} src={`/${e}-energy.png`} />)}
+                          {attack.cost.map((e, index) => <img className='energy-icon' key={index} src={`/${e}-energy.PNG`} />)}
                         </div>
                         {attack.damage}</h3>
                       <p>{attack.text}</p>
@@ -57,13 +57,13 @@ export function CardModal ({ card }) {
               {
                 card.resistances &&
                 <>
-                  <h3>Resistance: <img className='energy-icon' src={`/${card.resistances[0].type}-energy.png`} /> {card.resistances[0].value}</h3>
+                  <h3>Resistance: <img className='energy-icon' src={`/${card.resistances[0].type}-energy.PNG`} /> {card.resistances[0].value}</h3>
                 </>
               }
               {
                 card.weaknesses &&
                 <>
-                  <h3>Weakness: <img className='energy-icon' src={`/${card.weaknesses[0].type}-energy.png`} /> {card.weaknesses[0].value}</h3>
+                  <h3>Weakness: <img className='energy-icon' src={`/${card.weaknesses[0].type}-energy.PNG`} /> {card.weaknesses[0].value}</h3>
                 </>
               }
               <h3>Retreat Cost: {card.convertedRetreatCost}</h3>
