@@ -1,12 +1,14 @@
 import React from 'react'
 import { useDeckDispatch } from '@/app/hooks/useDeck'
+import { CardModal } from './CardModal'
 
 export function Card ({ card }) {
   const dispatch = useDeckDispatch()
 
   return (
     <li className='card'>
-      <img src={card.images.small} alt='' />
+      <img className='card-img-small' src={card.images.small} alt='' />
+      <CardModal card={card}/>
       <div className='card-info'>
         <button
           className='card-button'

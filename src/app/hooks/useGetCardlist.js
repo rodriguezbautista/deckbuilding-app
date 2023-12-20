@@ -8,7 +8,7 @@ export function useGetCardlist (searchText, setCardlist, equivalences) {
         pokemon.card.where({
           q: `legalities.standard:legal 
             (name:"${searchText}" ${(searchText === searchText.replace(/\s+/g, '')) ? `OR name:${searchText}*` : ''})`,
-          select: 'images,id,name,set,supertype,subtypes',
+          select: 'images,id,name,set,supertype,subtypes,types,hp,abilities,attacks,resistances,weaknesses,convertedRetreatCost',
           orderBy: '-set.id,id',
           pageSize: 64
         })
