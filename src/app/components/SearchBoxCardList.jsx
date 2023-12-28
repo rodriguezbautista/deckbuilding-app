@@ -32,8 +32,8 @@ export function SearchBoxCardList ({ searchText }) {
         {
           cardlist?.map(card =>
             <li className='searchbox-cardlist-item'
-            id={card.id} key={card.id} onClick={() => { handleCardSubmit(card) }}>
-              <img className='card-img-small' src={card.images.small} alt={card.id} />
+            id={card.id} key={card.id}>
+              <img className='card-img-small' onClick={() => { handleCardSubmit(card) }} src={card.images.small} alt={card.id} />
               <CardModal card={card}/>
             </li>)}
         {
