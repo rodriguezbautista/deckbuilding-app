@@ -8,7 +8,7 @@ export async function GET (req, { params }) {
     }
     let user
     await query('users', async (collection) => {
-      user = await collection.find({ username: params.user }, { projection: { _id: 0, username: 1 } }).toArray()
+      user = await collection.find({ username: params?.user }, { projection: { _id: 0, username: 1 } }).toArray()
     })
     return Response.json(user)
   } catch (err) {
