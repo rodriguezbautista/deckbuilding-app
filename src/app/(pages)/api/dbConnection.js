@@ -15,16 +15,17 @@ const dbName = 'pokemon-deckbuilder'
 
 export async function query (collectionName, callback) {
   try {
-    // Connect the client to the server (optional starting in v4.7)
     await client.connect()
     const db = client.db(dbName)
     const collection = db.collection(collectionName)
     await callback(collection)
+
+    // devuelvo el error a la funcion superior
+
+    // eslint-disable-next-line
   } catch (err) {
-    // buscar el codigo http correspondiente
     throw err
   } finally {
-    // Ensures that the client will close when you finish/error
     await client.close()
   }
 }

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useDeckDispatch } from '@/app/hooks/useDeck'
 import { useGetCardlist } from '@/app/hooks/useGetCardlist'
-import Equivalences from '../../resources/standardSetIds.json'
 import { CardModal } from './CardModal'
 
 export function SearchBoxCardList ({ searchText }) {
@@ -9,7 +8,7 @@ export function SearchBoxCardList ({ searchText }) {
   const dispatch = useDeckDispatch()
   const cardList = useRef(null)
 
-  useGetCardlist(searchText, setCardlist, Equivalences)
+  useGetCardlist(searchText, setCardlist)
 
   function handleCardSubmit (card) {
     dispatch({
