@@ -1,7 +1,7 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
 require('dotenv').config()
 
-const uri = process.env.DB_URI
+const uri = process.env.NEXT_PUBLIC_DB_URI
 console.log(uri)
 const client = new MongoClient(uri, {
   serverApi: {
