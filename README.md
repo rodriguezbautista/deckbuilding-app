@@ -1,6 +1,6 @@
-#Pokemon DeckBuilder
+# Pokemon DeckBuilder
 
-Esta es una alicacion para armado y almacenamiento de mazos pokemon.
+Esta es una aplicacion para armado y almacenamiento de mazos pokemon.
 
 ## Funcionalidades
 
